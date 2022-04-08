@@ -1,0 +1,11 @@
+@import url(../../index.css);
+
+.navigation ul a{
+    
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    color:var(--primary-color);
+}
+.navigation ul a:hover{
+    color:var(--active-color);
+}

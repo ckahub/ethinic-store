@@ -1,0 +1,11 @@
+@import url(../../index.css);
+
+aside.filter ul{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 10%;
+}
+
+.container{
+display: flex;
+}
