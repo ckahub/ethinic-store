@@ -3,12 +3,11 @@ import './AddToCart.css'
 
 export const AddToCart = () => {
   return (
-    <div className="card_Container">
-    <div className="card_V">
+    <div className="card">
     <div className="card_Img_V">
     <img className="card_Img_V" src="../assests/woman/saree3.jpg" alt="Saree 3"/>
     </div>
-    <div className="card_Details">
+    <div className="card-details">
         <h4>Saree</h4>
         <small>by KM Fashion</small>
         <div className="card_Price">
@@ -36,6 +35,6 @@ export const AddToCart = () => {
         </button>
     </div>                    
     </div>
-    </div>
+    
   )
 }

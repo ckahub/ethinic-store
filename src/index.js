@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import {BrowserRouter} from "react-router-dom";
+import { Navbar } from "./components/Navbar/Navbar";
 
 // Call make Server
 makeServer();

@@ -10,6 +10,19 @@
     display: flex;
     flex-direction: column;
 }
+.card{
+    height: max-content;
+    width: 15rem;
+    background-color: var(--off-white);
+    border-radius: 0.25rem;
+    padding: Orem 0rem ;
+    border: 0.125rem solid gray;
+    box-shadow: 0.2rem 0.2rem 0rem 0rem grey
+}
+.card-details{
+    margin: 0.2rem;
+    font-size: 1.5rem;
+}
 .btn.btn_Success{
     background-color:var(--active-color);
     color: var(--primary-color);
