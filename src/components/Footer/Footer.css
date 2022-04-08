@@ -1,0 +1,27 @@
+@import url(../../index.css);
+footer{
+    background-color: #172b4df3;
+    width: 100%;
+    height: 15rem;
+    color: var(--secondary-color);
+    font-size: medium;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+}
+footer .footer_brand{
+        font-weight: bolder; 
+        color: var(--active-color);
+        font-size: 2rem;
+        letter-spacing: 0.8rem;
+}
+footer .footer_tag{
+    font-size: small;
+    color: var(--secondary-color);
+
+}
+footer div{
+    flex-basis:30%;
+
+}

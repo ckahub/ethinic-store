@@ -1,0 +1,56 @@
+@import url(../../index.css);
+
+.cart-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.item-container{
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    height: max-content;
+    width: 15rem;
+    background-color: var(--off-white);
+    border-radius: 0.25rem;
+    padding: Orem 0rem ;
+    border: 0.125rem solid gray;
+    box-shadow: 0.2rem 0.2rem 0rem 0rem grey
+}
+.card-details{
+    margin: 0.2rem;
+    font-size: 1.5rem;
+}
+.btn.btn_Success{
+    background-color:var(--active-color);
+    color: var(--primary-color);
+}
+.btn.btn_Success:hover{
+    background-color:#1e9c1e;
+    color: white;
+}
+.add2cart{
+    background-color: var(--active-color);
+    color: var(--primary-color);
+    width: 14rem;
+    height: 2rem;
+    font-size: medium;
+    transition: ease-in-out 0.4ms;
+}
+.wishlist{
+    background-color: tan;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 14rem;
+    height: 2rem;
+}
+.add2cart:hover{
+    font-size: large;
+    color: #055252;
+}
+.wishlist:hover{
+    font-size: large;
+}
