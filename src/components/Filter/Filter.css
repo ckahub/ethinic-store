@@ -3,7 +3,7 @@
 aside.filter ul{
     display: flex;
     flex-direction: column;
-    flex-basis: 10%;
+    width:10rem;
 }
 
 .container{

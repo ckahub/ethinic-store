@@ -1,24 +1,26 @@
 import React from 'react'
-import './AddToCart.css'
+import './Card.css'
 
-export const AddToCart = () => {
+export const Card = (props) => {
+    const {item:{id,img,mrp,discount,price,brand,categoryName}}=props
   return (
     <div className="card">
     <div className="card_Img_V">
-    <img className="card_Img_V" src="../assests/woman/saree3.jpg" alt="Saree 3"/>
+    <img className="card_Img_V" src={img} alt="Saree 3"/>
     </div>
     <div className="card-details">
-        <h4>Saree</h4>
-        <small>by KM Fashion</small>
-        <div className="card_Price">
-            <span class="price_After">
-                Rs.1800
+        <h5>{categoryName}</h5>
+        <small>by {brand}</small>
+        <div className="card-price">
+        <span className="price_Before">
+                {mrp}
             </span>
-            <span className="price_Before">
-                Rs.3000
+            <span className="price_After">
+                {price}
             </span>
+            
             <span className="discount">
-                (40% OFF)
+                ({discount} off)
             </span>
         </div>
         <button className="add2cart">

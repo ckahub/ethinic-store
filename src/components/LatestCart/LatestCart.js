@@ -1,26 +1,26 @@
 import React from 'react'
 import './LatestCart.css'
 
-export const LatestCart = () => {
+export const LatestCart = ({id,img,mrp,discount,price,brand,categoryName,collectionYear}) => {
   return (
-    <div className="card_Container">
+    <div className="card-container">
     <div className="card_V">
     <div className="card_Img_V">
-        <img className="card_Img_V" src="#" alt="BlazerGrey"/>
+        <img className="card_Img_V" src={img} alt="ProductImage"/>
     </div>
     <div className="card_Badge">NEW</div>
     <div className="card_Details">
-        <h4>Blazer</h4>
-        <small>by KM Fashion</small>
-        <div className="card_Price">
+        <h4>{categoryName}</h4>
+        <small>by {brand}</small>
+        <div className="card-Price">
             <span className="price_After">
-                Rs.2450
+                {price}
             </span>
             <span className="price_Before">
-                Rs.3499
+                {mrp}
             </span>
             <span className="discount">
-                (30% OFF)
+                ({discount} off)
             </span>
         </div>
         <button className="add2cart">
