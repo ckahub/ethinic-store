@@ -130,7 +130,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    categoryName: "nightdress",
+    categoryName: "nightwear",
     subcategory: "2p",
     img:"https://ethinicwear.netlify.app/assests/woman/nightdress2.jpg",
     collectionYear:"2021",
@@ -142,7 +142,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    categoryName: "nightdress",
+    categoryName: "nightwear",
     subcategory: "2p",
     img:"https://ethinicwear.netlify.app/assests/woman/nightwear1.jpg",
     collectionYear:"2022",

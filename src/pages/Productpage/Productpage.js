@@ -6,7 +6,7 @@ import { Navbar } from '../../components/Navbar/Navbar'
 import {  Filter } from '../../components/Filter/Filter'
 import './Productpage.css'
 import { useProduct } from '../../context/product-context'
-import { useFilter,useProductFiter } from '../../context/filter-context'
+import { useFilter,useProductFilter } from '../../context/filter-context'
 
 
 
@@ -14,9 +14,10 @@ import { useFilter,useProductFiter } from '../../context/filter-context'
 export const Productpage = () => {
   const {products,setProduct}=useProduct();
   const {Fstate}=useFilter();
-  const filterProducts=useProductFiter(Fstate,products);
+  const filterProducts=useProductFilter(Fstate,products);
   console.log(Fstate,filterProducts)
-  const result=filterbyCategories(filterProduct,Fstate.categories);
+  //  const result=filterbyCategories(filterProduct,Fstate.categories);
+  console.log(Fstate);
 
   
   return (
