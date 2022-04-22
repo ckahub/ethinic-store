@@ -12,10 +12,10 @@ export const Filter = () => {
         <ul className="list">
             <div className="list-heading">
                 <span>Price</span>
-                <button >Reset</button>
+                <button onClick={()=>dispatch({type:"reset"})}>Reset</button>
             </div>
             <label for="slider">
-                <input className="filter-slider" type="range" min="5" max="100"  />
+                <input className="filter-slider" type="range" min="0" max="5000" onChange={(e)=>dispatch({type:"priceNav",payload:e.target.value})}/>
             </label>
             <div className="list-heading">
                 <span>Catagory</span>
@@ -55,19 +55,19 @@ export const Filter = () => {
                 <span>Brands</span>
             </div>
             <label className="list-label" for="checkbox1">
-                <input className="checkbox" type="checkbox" checked={Fstate.categories["shangrilla"]} onChange={()=>dispatch({type:"shangrilla"}) }/>Shangrilla
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["shangrilla"]} onChange={()=>dispatch({type:"shangrilla"}) }/>Shangrilla
             </label>
             <label className="list-label" for="checkbox2">
-                <input className="checkbox" type="checkbox" checked={Fstate.categories["manthan"]} onChange={()=>dispatch({type:"manthan"}) }/>Manthan
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["manthan"]} onChange={()=>dispatch({type:"manthan"}) }/>Manthan
             </label>
             <label className="list-label" for="checkbox2">
-                <input className="checkbox" type="checkbox" checked={Fstate.categories["dnmx"]} onChange={()=>dispatch({type:"dnmx"}) }/>DNMX
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["dnmx"]} onChange={()=>dispatch({type:"dnmx"}) }/>DNMX
             </label>
             <label className="list-label" for="checkbox2">
-                <input className="checkbox" type="checkbox" checked={Fstate.categories["vishal"]} onChange={()=>dispatch({type:"vishal"}) }/>Vishal
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["vishal"]} onChange={()=>dispatch({type:"vishal"}) }/>Vishal
             </label>
             <label className="list-label" for="checkbox2">
-                <input className="checkbox" type="checkbox" checked={Fstate.categories["mansarover"]} onChange={()=>dispatch({type:"mansarover"}) }/>Mansarover
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["mansarover"]} onChange={()=>dispatch({type:"mansarover"}) }/>Mansarover
             </label>
         </ul>        
     </aside>

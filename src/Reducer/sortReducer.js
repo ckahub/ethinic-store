@@ -1,53 +1,69 @@
+import { initailFilter } from "../context/filter-context";
 export const sortReducer = (state, action) => {
   console.log(action);
   switch (action.type) {
     case "HIGH-TO-LOW": {
       return { ...state, sort: action.type };
     }
-    case "LOW-TO-HIGH": {
-      return { ...state, sort: action.type };
+    case "LOW-TO-HIGH":
+      {
+        return { ...state, sort: action.type };
+      }
+      console.log(action.type);
+
+    case "priceNav": {
+      return { ...state, priceRange: action.payload };
     }
-    console.log(action.type)
-
-
-   /*  category according dispatch  */
+    case "reset": {
+      return initailFilter;
+    }
+    /*  category according dispatch  */
 
     case "saree":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+
     case "dress":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+
     case "kurti":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+
     case "western":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+
     case "skirt":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
-    case "nightwear":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
 
-   /*  brand according dispatch  */
+    case "category":
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          [action.type]: !state.categories[action.type],
+        },
+      };
+
+    /*  brand according dispatch  */
     case "shangrilla":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+      return {
+        ...state,
+        brands: { ...state.brands, [action.type]: !state.brands[action.type] },
+      };
     case "manthan":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+      return {
+        ...state,
+        brands: { ...state.brands, [action.type]: !state.brands[action.type] },
+      };
     case "dnmx":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+      return {
+        ...state,
+        brands: { ...state.brands, [action.type]: !state.brands[action.type] },
+      };
     case "vishal":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
+      return {
+        ...state,
+        brands: { ...state.brands, [action.type]: !state.brands[action.type] },
+      };
     case "mansarover":
-        return {...state,categories:{...state.categories,[action.type]:!state.categories[action.type]}
-    }
-
+      return {
+        ...state,
+        brands: { ...state.brands, [action.type]: !state.brands[action.type] },
+      };
 
     // case "CATEGORY":
     //   return {
