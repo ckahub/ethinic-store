@@ -20,16 +20,46 @@ export const sortReducer = (state, action) => {
     /*  category according dispatch  */
 
     case "saree":
-
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          [action.type]: !state.categories[action.type],
+        },
+      };
     case "dress":
-
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          [action.type]: !state.categories[action.type],
+        },
+      };
     case "kurti":
-
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          [action.type]: !state.categories[action.type],
+        },
+      };
     case "western":
-
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          [action.type]: !state.categories[action.type],
+        },
+      };
     case "skirt":
-
-    case "category":
+      return {
+        ...state,
+        categories: {
+          ...state.categories,
+          [action.type]: !state.categories[action.type],
+        },
+      };
+    case "nightwear":
       return {
         ...state,
         categories: {

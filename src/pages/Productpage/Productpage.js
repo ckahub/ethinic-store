@@ -15,8 +15,8 @@ export const Productpage = () => {
   const {products,setProduct}=useProduct();
   const {Fstate}=useFilter();
   const filterProducts=useProductFilter(Fstate,products);
-  console.log(Fstate,filterProducts)
-  //  const result=filterbyCategories(filterProduct,Fstate.categories);
+  // console.log(Fstate,filterProducts)
+  // const result=filterbyCategories(filterProduct,Fstate.categories);
   console.log(Fstate);
 
   
