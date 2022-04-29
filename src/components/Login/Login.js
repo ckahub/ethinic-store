@@ -23,7 +23,7 @@ export const Login = () => {
                     <label for="remember">Remember me</label><br/>
                 </div>
                 <div className="login-form-group">
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" className="btn">Login</button>
                 </div>
                 <div className="login-form-group form-link">
                     <a href="./signup.html">Forget Password</a><br/>

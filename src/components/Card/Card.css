@@ -1,6 +1,6 @@
 @import url(../../index.css);
 
-.cart-container{
+.card-container{
     display: flex;
     justify-content: space-around;
     padding: 1rem;
@@ -16,12 +16,23 @@
     background-color: var(--off-white);
     border-radius: 0.25rem;
     padding: Orem 0rem ;
-    border: 0.125rem solid gray;
-    box-shadow: 0.2rem 0.2rem 0rem 0rem grey
+    border: 0.25rem solid gray;
+    justify-content:space-evenly;
 }
 .card-details{
-    margin: 0.2rem;
-    font-size: 1.5rem;
+    margin: 0.1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.card-price{
+    display: flex;
+    justify-content: space-evenly;
+}
+h5{
+    margin: 0.25rem;
+    padding: 0rem;
 }
 .btn.btn_Success{
     background-color:var(--active-color);

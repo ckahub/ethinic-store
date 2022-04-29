@@ -6,6 +6,9 @@
     padding: 1rem;
     flex-wrap: wrap;
 }
+.card_Badge {
+    top:auto;
+}
 .item-container{
     display: flex;
     flex-direction: column;

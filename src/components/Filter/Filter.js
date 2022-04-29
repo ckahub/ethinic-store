@@ -1,72 +1,76 @@
 import React from 'react'
 import './Filter.css'
+import { FilterProvider,useFilter } from '../../context/filter-context';
 
 export const Filter = () => {
+    const {Fstate,dispatch}=useFilter();
+
+    
   return (
-    <div class="container">
-    <aside class="filter">
-        <ul class="list">
-            <div class="list-heading">
+    
+    <aside className="filter">
+        <ul className="list">
+            <div className="list-heading">
                 <span>Price</span>
-                <button >Reset</button>
+                <button onClick={()=>dispatch({type:"reset"})}>Reset</button>
             </div>
             <label for="slider">
-                <input class="filter-slider" type="range" min="5" max="100" value="1" />
+                <input className="filter-slider" type="range" min="0" max="5000" onChange={(e)=>dispatch({type:"priceNav",payload:e.target.value})}/>
             </label>
-            <div class="list-heading">
+            <div className="list-heading">
                 <span>Catagory</span>
             </div>
-            <label class="list-label" for="checkbox1">
-                <input class="checkbox" type="checkbox" />Saree
+            <label className="list-label" for="checkbox1">
+                <input className="checkbox" type="checkbox" checked={Fstate.categories["saree"]} onChange={()=>dispatch({type:"saree"}) } />Saree
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />Dress
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.categories["dress"]} onChange={()=>dispatch({type:"dress"}) }/>Dress
             </label>
-            <label class="list-label" for="checkbox1">
-                <input class="checkbox" type="checkbox" />Kurti
+            <label className="list-label" for="checkbox1">
+                <input className="checkbox" type="checkbox" checked={Fstate.categories["kurti"]} onChange={()=>dispatch({type:"kurti"}) }/>Kurti
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />Western
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.categories["western"]} onChange={()=>dispatch({type:"western"}) }/>Western
             </label>
-            <label class="list-label" for="checkbox1">
-                <input class="checkbox" type="checkbox" />Skirt
+            <label className="list-label" for="checkbox1">
+                <input className="checkbox" type="checkbox" checked={Fstate.categories["skirt"]} onChange={()=>dispatch({type:"skirt"}) }/>Skirt
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />Night Wear
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.categories["nightwear"]} onChange={()=>dispatch({type:"nightwear"}) }/>Night Wear
             </label>
 
-            <div class="list-heading">
+            <div className="list-heading">
                 <span>Sort by</span>
             </div>
-            <label class="list-label" for="roundbox">
-                <input type="radio" id="roundbox" name="price" />Price-High to Low
+            <label className="list-label" for="roundbox">
+                <input type="radio" id="roundbox" name="price" checked={Fstate.sort==="HIGH-TO-LOW"} onChange={()=>dispatch({type:"HIGH-TO-LOW"})} />Price-High to Low
             </label>
-            <label class="list-label" for="roundbox">
-            <input type="radio" id="roundbox" name="price"/>Price-Low to High
+            <label className="list-label" for="roundbox">
+                <input type="radio" id="roundbox" name="price" checked={Fstate.sort==="LOW-TO-HIGH"} onChange={()=>dispatch({type:"LOW-TO-HIGH"})} />Price-Low to High
             </label>
            
 
 
-            <div class="list-heading">
+            <div className="list-heading">
                 <span>Brands</span>
             </div>
-            <label class="list-label" for="checkbox1">
-                <input class="checkbox" type="checkbox" />Shangrilla
+            <label className="list-label" for="checkbox1">
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["shangrilla"]} onChange={()=>dispatch({type:"shangrilla"}) }/>Shangrilla
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />Manthan
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["manthan"]} onChange={()=>dispatch({type:"manthan"}) }/>Manthan
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />DNMX
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["dnmx"]} onChange={()=>dispatch({type:"dnmx"}) }/>DNMX
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />Vishal
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["vishal"]} onChange={()=>dispatch({type:"vishal"}) }/>Vishal
             </label>
-            <label class="list-label" for="checkbox2">
-                <input class="checkbox" type="checkbox" />Mansarover
+            <label className="list-label" for="checkbox2">
+                <input className="checkbox" type="checkbox" checked={Fstate.brands["mansarover"]} onChange={()=>dispatch({type:"mansarover"}) }/>Mansarover
             </label>
         </ul>        
     </aside>
-    </div>
+  
   );
 };
